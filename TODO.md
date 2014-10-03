@@ -7,6 +7,7 @@
 
 ## Stubs
 (practically no content)
+* [[initialization|initialization]]
 * [[Rosetta Stone|Rosetta Stone]]
 * [[subtype|subtype]]
 
