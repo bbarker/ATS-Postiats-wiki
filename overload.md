@@ -117,6 +117,73 @@ Note an interesting point here is that each use of `[]` actually employs both th
  
 A somewhat less conventional example using nothing between `[` and `]` is [locking access to a variable](http://www.ats-lang.org/DOCUMENT/ATS2TUTORIAL/CODE/chap_brktoverld.dats). See the [ATS Tutorial](http://www.ats-lang.org/DOCUMENT/ATS2TUTORIAL/HTML/book1.html) section on *Bracket Overloading* for more information.
 
+
+## Dot-symbol overloading
+
+Dot symbol overloading allows the emulation of selecting fields from a record-value or methods from an object-value, which can be quite useful when interacting with other languages that support these features. 
+There are two forms of dot-notation that can be used for overloading in ATS: *dot-notation* and *functional dot-notation*. Functional dot-notation looks like the system used in Python, and is a slightly restricted form that must be used for linear-values. This is demonstrated below; for more information see the [ATS Tutorial](http://www.ats-lang.org/DOCUMENT/ATS2TUTORIAL/HTML/book1.html) section on *Dot-Symbol Overloading*.
+
+### Dot-notation (non-linear)
+```ocaml
+//
+typedef counter = int
+//
+extern
+fun counter_make (): counter
+extern
+fun counter_free (counter): void
+//
+extern
+fun counter_get (cntr: !counter): int
+extern
+fun counter_incby (cntr: !counter, n: int): void
+//
+
+//
+overload .get with counter_get
+overload .incby with counter_incby
+//
+
+```
+
+### Functional dot-notation (linear or non-linear)
+
+Instead of implementing counter as an `int`, what if it were a linear value?
+```ocaml
+//
+(* typedef counter = int // replace this with a linear type *)
+absvtype counter = ptr
+//
+```
+
+Now this will **NOT** typecheck:
+
+```ocaml
+val n0 = c0.get
+```
+
+But this will:
+
+```ocaml
+val n0 = c0.get() // = counter_get(c0)
+```
+
+The reason is that the functional style must be used for linear values, to avoid having the situation
+where a linear value is overwritten like this:
+
+```ocaml
+val () = foo.x := x0
+```
+
+While the above is natural to write, it is less natural to write, which of course won't typecheck:
+
+```ocaml
+val () = foo.x() := x0
+```
+
+Thus, enforcing the use of functional dot-notation for linear types makes this process natural.
+
+
 ### Creating new symbols with macros
 
 A combination of macros (macdefs) and fixity assignments can be used
