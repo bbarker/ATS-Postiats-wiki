@@ -133,8 +133,45 @@ The `[lib].cats` file accomplishes two things: it annotates existing functions a
 
 The `[lib].dats` file in the `DATS` directory, if it exists, should implement functions that are implemented in ATS but not in the C library (or functions that are implemented in ATS and are preferred over the implementation in C).
 
-''(Fill in more here)''
+When creating an interface or package, it is a good idea to use `ATS_PACKNAME` and `ATS_EXTERN_PREFIX`.
+For instance, here is an example found in jansson.sats:
 
+```
+#define ATS_PACKNAME "ATSCNTRB.jansson"
+#define ATS_EXTERN_PREFIX "atscntrb_jansson_" // prefix for external names
+```
+
+Say you declare a function in a file XYZ.dats:
+
+```ocaml
+extern fun foo (...): ...
+```
+The ATS compiler generates a global name for foo
+using the full path of XYZ.dats, which is often hard to read.
+
+If the flag ATS_PACKNAME is set, then the global name for foo
+is ${ATS_PACKNAME}foo, where ${ATS_PACKNAME} is the string
+value of ATS_PACKNAME.
+
+There is also a special flag named ATS_EXTERN_PREFIX.
+
+Say we have
+
+```ocaml
+#define ATS_EXTERN_PREFIX "ABCDE_"
+```
+If we do
+```ocaml
+extern fun foo(...): ... = "mac#%"
+```
+then the external name of foo is ${ATS_EXTERN_PREFIX}foo. Basically, the '%' here
+is replaced with the string value stored in ATS_EXTERN_PREFIX.
+
+
+
+### Using alternative package versions
+Another useful utility to know about, when using different versions of a package (for instance,
+to switch from a user's development version to the stable package version) is [[atspkgreloc|atspkgreloc]].
 
 ## Sharing constants statically and dynamically between ATS and C
 It can be useful to make available constants in both the statics and dynamics of ATS, while also having
