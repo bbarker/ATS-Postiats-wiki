@@ -38,7 +38,10 @@ address can be obtained using `view@` (see below).
 * `view@` - unary operator that gives the linear proof (an at-view) of its argument, which should be a variable (`var`); see `addr@` above. 
 * `viewdef` - introduce an alias / name for a concrete view definition; a specialized form of `stadef` [1]; see [[type]].
 * `viewtypedef` - introduce an alias / name for a concrete view type definition; a specialized form of `stadef` [1]; see [[type]].
-* `with` - adds an overloading to a symbol introduced with `symintr`; this tells with what it is overloaded; see [[overload]].
+* `with` - Has several uses. It can add an overloading to a symbol introduced with `symintr`; this tells with what it is overloaded; see [[overload]]. Also, it is frequently used for certain kinds of aliasing. For instance, it can give an alias to a linear proof:
+```ocaml
+var y: int with pfy // pfy is an alias of view@(y): int? @ y
+```
 
 [1]: The latter may be substituted for the former.
 
