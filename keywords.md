@@ -1,8 +1,12 @@
+### Note: probably a great way to fill in and curate this page is to grep for 'keyword' in the ATS Book, as they are often described as such there.
+
 * `absprop` - introduce a named abstract proposition definition; a specialized form of `sta` [1]; see [[type]].
 * `abstype` - introduce a named abstract type definition; a specialized form of `sta` [1]; see [[type]].
 * `absview` - introduce a named abstract view definition; a specialized form of `sta` [1]; see [[type]].
 * `absviewtype` - introduce a named abstract view type definition; a specialized form of `sta` [1]; see [[type]].
 * `absvtype`  - shorter name for `absviewtype`; see [[type]].
+* `addr@` - unary operator that takes a variable (see `var` below) and returns a pointer; the view at this
+address can be obtained using `view@` (see below).
 * `castfn` - a function (`fn`) that changes the type, both dynamically and statically, of its argument. The converted value is returned. When only a static `castfn` is needed, one can use the `cast` and related functions in `unsafe.sats` to save time (a common use is converting a pointer from C to some other viewtype).
 * `dataprop` - introduce a named algebraic proposition definition [2]; see [[type]].
 * `datatype` - introduce a named algebraic type definition [2]; see [[type]].
@@ -31,7 +35,7 @@
 * `val-` - introduces a val-declaration with additional meaning; if names in a datatype constuctor are being bound (e.g. `val-list_cons(x,xs) = some_list`) then it will suppress a warning message in the case that the pattern matching is non-exhaustive. If instead a value is being matched (e.g. `val-8 = n*4`), this will perform dynamic checking and will error (in this example, the program will exist if n is not equal to 2).
 * `val+` - introduces a val-declaration with additional meaning; if names in a datatype constuctor are being bound (e.g. `val+list_cons(x,xs) = some_list`) the warning message about non-exhaustiveness for the pattern matching will be converted into an error. If `val+` is matching a value (as in the `val-` example above, it is similar to `val-`, but will do static checking. This is useful for things like indexed types, but cannot be used in all the cases where dynamic checking can be used.
 * `var` - introduces a stack-allocated (local) variable. In contrast to a val-declaration (see `val` above), these variables may be updated or may be declared without being [[initialized|initialization]]. Note, however, that it is fine to overwrite a `val` name with another `val` of the same name. 
-
+* `view@` - unary operator that gives the linear proof (an at-view) of its argument, which should be a variable (`var`); see `addr@` above. 
 * `viewdef` - introduce an alias / name for a concrete view definition; a specialized form of `stadef` [1]; see [[type]].
 * `viewtypedef` - introduce an alias / name for a concrete view type definition; a specialized form of `stadef` [1]; see [[type]].
 * `with` - adds an overloading to a symbol introduced with `symintr`; this tells with what it is overloaded; see [[overload]].
