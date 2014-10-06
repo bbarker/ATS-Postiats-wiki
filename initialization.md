@@ -1,6 +1,5 @@
-
 ## Arrays
-Static arrays have the following type
+Arrays have the following type
 ```
 @[type][length](initial value(s))
 ```
