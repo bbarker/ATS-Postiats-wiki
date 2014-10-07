@@ -1,4 +1,4 @@
-## Arrays
+## Stack-allocated arrays
 Arrays have the following type
 ```
 @[type][length](initial value(s))
