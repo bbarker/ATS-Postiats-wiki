@@ -3,8 +3,17 @@ Arrays have the following type
 ```
 @[type][length](initial value(s))
 ```
+For example:
+```ocaml
+   var A0 = @[int][4]() // A0 = ?,?,?,?
+   var A1 = @[int][4](1) // A1 = 1,1,1,1
+   var A2 = @[int][4](1,2) // A2 = 1,2,1,2
+   var A3 = @[int][4](1,2,3) // A3 = 1,2,3,1
+   var A4 = @[int][4](1,2,3,4) // A4 = 1,2,3,4
+   var A5 = @[int][4](1,2,3,4,5) // A5 = 1,2,3,4
+```
 
-The following example demonstrates how array initialization works:
+The following example demonstrates how array initialization can be used in more detail:
 
 
 ```ocaml
@@ -62,5 +71,5 @@ $ ./a.exe
 
 1 4 4 4
 
-1 2346224 5 5
+1 1 5 5
 ```
