@@ -206,3 +206,6 @@ __ATS(#define ATS_MY_MACRO MY_MACRO)
 ```
 
 Then use `gcc -E`, for example, to preprocess `mymacro_hats` to generate a HATS file `mymacro.hats`, which can be included in ATS code directly.
+
+A limitation of this approach is that constants defined in a C library can not be handled in this way, since 
+other things are also defined in a C library that will not parse as ATS code.
