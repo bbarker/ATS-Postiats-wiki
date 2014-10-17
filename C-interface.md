@@ -131,7 +131,7 @@ The `[lib].cats` file accomplishes two things: it annotates existing functions a
 #include <[lib].h>
 ```
 
-The `[lib].dats` file in the `DATS` directory, if it exists, should implement functions that are implemented in ATS but not in the C library (or functions that are implemented in ATS and are preferred over the implementation in C).
+The `[lib].dats` file in the `DATS` directory, if it exists, should implement functions that are implemented in ATS but not in the C library (or functions that are implemented in ATS and are preferred over the implementation in C, or dynamic wrappers around the C library functions). There can also be a `HATS` directory containing various `.hats` files, which is similar to `DATS` but does not have the one-to-one correspondence that a `.dats` file would have with a `.sats` file; this is used for alternative implementations of functions, or in the case of C libraries, possibly alternative implementations of a similar C library (and in this case, each `.hats` file would likely depend on a particular `.cats` file as well).
 
 When creating an interface or package, it is a good idea to use `ATS_PACKNAME` and `ATS_EXTERN_PREFIX`.
 For instance, here is an example found in jansson.sats:
