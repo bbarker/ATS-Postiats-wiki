@@ -38,10 +38,8 @@ address can be obtained using `view@` (see below).
 * `view@` - unary operator that gives the linear proof (an at-view) of its argument, which should be a variable (`var`); see `addr@` above. 
 * `viewdef` - introduce an alias / name for a concrete view definition; a specialized form of `stadef` [1]; see [[type]].
 * `viewtypedef` - introduce an alias / name for a concrete view type definition; a specialized form of `stadef` [1]; see [[type]].
-* `with` - Has several uses. It can add an overloading to a symbol introduced with `symintr`; this tells with what it is overloaded; see [[overload]]. Also, it is frequently used for certain kinds of aliasing. For instance, it can give an alias to a linear proof:
-```ocaml
-var y: int with pfy // pfy is an alias of view@(y): int? @ y
-```
+* `with` - Has several uses. It can add an overloading to a symbol introduced with `symintr`; this tells with what it is overloaded; see [[overload]]. Also, it is frequently used for certain kinds of aliasing. For instance, it can give an alias to a linear proof: `var y: int with pfy // pfy is an alias of view@(y): int? @ y`
+* `withtype` - initiate a style of type annotation. This is a still supported “old” keyword inherited from DML. For more, see: [withtype keyword on ats.lang.users](https://groups.google.com/forum/#!topic/ats-lang-users/5jNYHIRuf6k), [withtype.dats sample](http://www.ats-lang.org/SERVER/MYCODE/Patsoptaas_serve.php?mycode_url=https://raw.githubusercontent.com/githwxi/ATS-Postiats/master/doc/EXAMPLE/TESTATS/withtype.dats) and [JFPmp.pdf](http://www.cs.bu.edu/~hwxi/academic/papers/JFPmp.pdf).
 
 [1]: The latter may be substituted for the former.
 
