@@ -65,6 +65,7 @@ atslib libc/DATS/gmp.dats
 
 ```
 
+Other GMP problems can arise; if you don't care about GMP support in ATS (i.e. you aren't too worried about constraints involving large numbers), then you can bypass GMP support by editing [src/Makefile](../../blob/master/src/Makefile) and replacing `gmpknd` with `intknd`. Also note that if you want to specify linker and library flags for GMP, you must currently do so through the environment variable `LIBGMP`, **not** `LDFLAGS`.
 
 
 ## Install ATS using package system
