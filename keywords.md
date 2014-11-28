@@ -26,6 +26,8 @@ address can be obtained using `view@` (see below).
 * `prefix` - like `symintr`, but with fixity; see [[overload]].
 * `postfix` - like `symintr`, but with fixity; see [[overload]].
 * `propdef` - introduce an alias / name for a proposition definition; a specialized form of `stadef` [1]; see [[type]].
+* `primplmnt` - implement a proof function; see [prfun, extern and implement at ats.lang.users](https://groups.google.com/forum/#!topic/ats-lang-users/7-EMCceXpv4); see also `primplement`.
+* `primplement` - implement a proof function; see [prfun, extern and implement at ats.lang.users](https://groups.google.com/forum/#!topic/ats-lang-users/7-EMCceXpv4); see also `primplmnt`.
 * `sta` - introduce an alias / name for an abstract static definition; there are specialized form of it; see [[type]].
 * `stadef` - introduce an alias / name for a concrete static definition; there are specialized form of it; see [[type]].
 * `staload` - either loads a name‑space assigning it to a named prefix or opens a name‑space (anonymously, without a prefix); see [[staload]].
