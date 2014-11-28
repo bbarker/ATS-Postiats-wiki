@@ -129,3 +129,7 @@ You can also try ATS2 using [this experimental online tool][25], or try using a 
 
 [26]: http://www.ats-lang.org/EXAMPLE/EFFECTIVATS/
 [27]: https://github.com/githwxi/ATS-Postiats/tree/master/doc/EXAMPLE/EFFECTIVATS
+
+### How do I define an enumerated type à la Ada?
+
+Say you want to define an enumerated type where items are represented by none sequential numbers: define the base type to be used, then use `macdef` to assign a representation value for each item. See [Enumerations on ats.lang.users](https://groups.google.com/forum/#!topic/ats-lang-users/Dqphu0evVbs).
