@@ -7,3 +7,7 @@ The design of ATS helps the programmer to create code without memory leaks. Stil
 Here are some strategies for creating memory-safe code in ATS.
 
 > Fill me in!
+
+### See also
+
+[Types of malloc in ATS on ats.lang.users](https://groups.google.com/forum/#!topic/ats-lang-users/LFlVcgX7aAA).
