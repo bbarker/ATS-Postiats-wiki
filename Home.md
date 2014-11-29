@@ -24,6 +24,6 @@ For the first version of ATS, there is a largely unmaintained [wiki][3].
 ATS2 is distributed under the GNU General Public License version 3 (GPLv3), or any later version.
 
 [1]: http://www.ats-lang.org/
-[2]: http://www.ats-lang.org/DOCUMENT/INT2PROGINATS/HTML/book1.html
+[2]: http://ats-lang.sourceforge.net/DOCUMENT/INT2PROGINATS/HTML/INT2PROGINATS-BOOK.html
 [3]: https://sourceforge.net/p/ats-lang/wiki/Home/
-[4]: http://www.ats-lang.org/DOCUMENT/ATS2TUTORIAL/HTML/book1.html
+[4]: http://ats-lang.sourceforge.net/DOCUMENT/ATS2TUTORIAL/HTML/ATS2TUTORIAL-BOOK.html
