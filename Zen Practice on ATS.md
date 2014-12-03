@@ -37,7 +37,7 @@ Every relationship is located at the library.
 
 ### Hongwei check
 
- assume that this kind of "philosophical" stuff is always very difficult
+I assume that this kind of "philosophical" stuff is always very difficult
 to translate.
 
 ATS is a layered system: dynamics: statics: sorts. The statics is meant
