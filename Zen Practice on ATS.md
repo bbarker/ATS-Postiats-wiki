@@ -1,3 +1,5 @@
+## Kiwamu Okabe's practice
+
 On real world, there are not meaning. There are values only.
 Meaning is located at a mind of human who watch the values.
 Then, it's nonsense that you think type constructor creates values. The order is reversed.
@@ -32,3 +34,29 @@ The programmer can choose it.
 
 Any relationship is not implemented by ATS2 language implementation.
 Every relationship is located at the library.
+
+### Hongwei check
+
+ assume that this kind of "philosophical" stuff is always very difficult
+to translate.
+
+ATS is a layered system: dynamics: statics: sorts. The statics is meant
+to reason about dynamics. Say that you have an array of 0's and 1's. A type
+for this array may state that there are equal number of 0's and 1's in
+this array at a particular point (though how 0's and 1's are distributed
+is unspecified). Your waterpipe analogy is also a good one: shape stays
+but content can change.
+
+Say you write a program in Python or Ruby. Once your program is constructed,
+what should you do? Most likely, you want to run it so that you may find some bugs.
+Then you try to fix the bugs and repeat the process. It is not surprising that such
+languages put emphasis on unit testing.
+
+In ATS, you can do the same but there is another option. You can try to refine the
+types in your program so that you can flush out some (potential) bugs. What is so
+attractive about this option is that you do not have to wait until your program is ready to
+run. You can (and probably should) do it while you are developing your program.
+
+So while types themselves are static, types assigned to values can be refined.
+Compared to OCaml and Haskell, I think it is probably fair to say that ATS supports
+type refinement to a much greater extent.
