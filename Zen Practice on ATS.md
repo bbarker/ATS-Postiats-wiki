@@ -60,3 +60,112 @@ run. You can (and probably should) do it while you are developing your program.
 So while types themselves are static, types assigned to values can be refined.
 Compared to OCaml and Haskell, I think it is probably fair to say that ATS supports
 type refinement to a much greater extent.
+
+### John Skaller's comment
+
+> So while types themselves are static, types assigned to values can be refined.
+> Compared to OCaml and Haskell, I think it is probably fair to say that ATS supports
+> type refinement to a much greater extent.
+
+Although no expert and unsure how one would measure such extent,
+I would point out Ocaml polymorphic variants, which I suspect are considerably
+higher level than ATS typing.
+
+However, there are problems. Here's a rough description.
+
+Originally, polymorphic variants were flat. A polymorphic variant is just
+an arbitrary set of variants (injections, type constructors ...).
+Unlike ordinary variants where a union type had fixed variants.
+
+So consider processing some cases A so that after we have
+an overlapping set of cases B, with ordinary variants you have
+to translate to corresponding but distinct variants, with polymorphic
+variants you do not. This provides both run time performance advantage
+as well as reducing coding load.
+
+I was one of the first users, trying to use them in my compiler.
+Compilers translate terms in many passes and using a fat set
+of all possibilities as inputs and output for every pass is common
+practice but it is easy to break invariants.
+
+But flat polymorphic variants are of no use here because the terms a compiler
+deals with are almost universally recursive.
+
+Enter covariant polymorphic variants.
+
+Consider a type
+
+```ocaml
+        type t1 = [ `A of t1 | `B | `C]
+```
+
+and suppose you want to get rid of the C. Then you have a type
+
+```ocaml
+        type t2 = [`A of t1 | `B ]
+```
+
+by throwing out the `C term, which is no good at all because the argument of
+the `A constructor is still the old t1. We need to reduce that to t2.
+
+The method for doing this is hard, we have to use open recursion:
+
+```ocaml
+        type 'a t2' = [`A of 'a | `B]
+        type 'a t1' = ['a t2' | `C]
+        type t2 = 'a t2' as 'a
+        type t1 = 'a t1' as 'a
+```
+
+[I think that's right .. er .. hmm ]
+
+Anyhow the key point is on line 2: we built t1' on top of t2' by replacing
+the recursion with a type variable. This makes the terms "flat" but parametric.
+
+Then we close the terms with recursion. so now t1 is a genuine subtype of t2.
+We have to ensure covariance here because the processing function that removes
+the `C term is recursive.
+
+This is a simple example, which shows it isn't too hard. Very useful indeed
+if you have a type with 20 or so variants (which I do in my compiler).
+
+But there's a problem, and it's a killer. There isn't just one type involved,
+there are 6 or more mutually recursive types.
+
+So now, you get a combinatorial explosion, you need 6 or more parameters
+in the open types and closing them precisely is well nigh impossible.
+
+In the end I gave up and went back to "assert false" on branches that
+shouldn't occur. Static checking would be much better but it would
+make the code very difficult to get right, and also very fragile.
+
+Furthermore, the usage in explosive/propagating. Lets suppose a term
+
+```ocaml
+        Symbol of int * descr | Literal of float
+```
+
+is used somewhere and you refine type descr as you process these terms ..
+then you have to refine the above type as well. Refinements propagate to all
+parents (including self if the type is recursive).
+
+ATS typing is quite different of course and refinement isn't done the same way,
+but the issue above with refinement would seem to be a universal issue.
+
+Actually there's another example, well known: take pointer types in C and
+throw in "const". That broke almost every program in existence including
+pretty much the whole C Standard library. C++ was designed with const
+already there but it introduced a lot of complexity. and the
+concept really broken down with templates.
+
+Another interesting example is Posix. No one can be happy with the fact
+everything is an int: file descriptors, sockets, error codes, thread ids ..
+even Posix isn't happy about this and uses typedefs to try to distinguish.
+In the Felix bindings for Posix, I can and do use stronger typing,
+but always it creates a mess because each function has strange special
+cases and overlaps that don't fit any sane typing scheme.
+
+I'm really interested to see how ATS handles these issues. Refinements
+have to propagate or they're useless, but not too far or they render the
+code too difficult to write and modify. They need to be contained somehow,
+for example by hiding them behind an interface (abstraction).
