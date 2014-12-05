@@ -134,6 +134,6 @@ You can also try ATS2 using [this experimental online tool][25], or try using a 
 
 Say you want to define an enumerated type where items are represented by none sequential numbers: define the base type to be used, then use `macdef` to assign a representation value for each item. See [Enumerations on ats.lang.users](https://groups.google.com/forum/#!topic/ats-lang-users/Dqphu0evVbs).
 
-### How do I quickly check/investigate the prelude library?
+### How do I quickly search/investigate the prelude library?
 
 Near to everything with ATS, ends to rely on this library. There's an on‑line HTML page, with colourization, which help to have a look at all of its content: [ATSPRE, all in one](http://ats-lang.sourceforge.net/DOCUMENT/ATS-Postiats/prelude/HTML/ATSPRE_all_in_one.html).
