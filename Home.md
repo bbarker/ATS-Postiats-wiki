@@ -2,7 +2,7 @@ Welcome to the wiki for ATS2.
 
 The most recent released version of ATS2 is ATS2-0.1.5.
 
-The programming language ATS is a statically typed language with a type system rooted in the framework Applied Type System. ATS unifies specification and implementation by accommodating a programmer-centric approach to program verification: How do we know a program being implemented correctly? We ask the programmer to demonstrate it with a proof.
+The programming language ATS is a statically typed language with a type system rooted in the framework Applied Type System. ATS unifies implementation with formal specification by accommodating a programmer-centric approach to program verification: How do we know a program being implemented correctly? We ask the programmer to demonstrate it with a proof.
 
 ATS also has another [website][1] (built using ATS itself). For a thorough introduction to ATS, see the book *[Introduction to Programming in ATS][2]* and *[A Tutorial on Programming Features in ATS][4]*.
 
