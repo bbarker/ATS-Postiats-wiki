@@ -4,6 +4,8 @@ Currently, this is possible for the following languages:
 * C (The default; several compilers are known to work, including GCC, LLVM/Clang, and TinyCC.)
 * Javascript (Compilation is supported by the emscripten compiler which compiles C code to javascript [\[1\]][1].)
 * [Python](https://github.com/githwxi/ATS-Postiats-contrib/tree/master/projects/MEDIUM/ATS-parse-emit/Python)
+* PHP
+* Perl
 
 ### Introduction
 
@@ -33,6 +35,26 @@ they should probably grouped together and then translated into something like:
 ```python
 tmp = (v1, v2, ..., vn) # (python)
 ```
+
+### Javascript
+
+Simple examples can be tried [on-line](http://www.ats-lang.org/SERVER/MYCODE/Patsoptaas_serve.php?mycode=hello).
+
+Here are steps to generate Javascript from ATS on your own system:
+
+1. Generating the command `atscc2js`. There is a packaged version [on sourceforge](http://sourceforge.net/p/ats2-lang-contrib/code/ci/master/tree/projects/ATSCC2JS/) (also on [github](https://github.com/githwxi/ATS-Postiats-contrib/tree/master/projects/MEDIUM/ATS-parse-emit/JavaScript)).
+
+  Use `make` to build. Of course you need `patscc` and `patsopt`.
+
+2. Please take a look at the examples in [this directory](https://github.com/githwxi/ATS-Postiats-contrib/blob/master/projects/MEDIUM/ATS-parse-emit/JavaScript/TEST). There is a Makefile there that shows how to generate JS code from ATS source.
+
+  Say you have `foo.dats`. Essentially this is what you need to generate `foo_dats.js`:
+
+  ```
+  patsopt -d foo.dats | atscc2js -o foo_dats.js
+  ```
+
+
 
 ### Python
 For compiling code to Python, there is currently no plan to handle pointer operations.
