@@ -137,3 +137,7 @@ Say you want to define an enumerated type where items are represented by none se
 ### How do I quickly search/investigate the prelude library?
 
 Near to everything with ATS, ends to rely on this library. There's an on‑line HTML page, with colourization, which help to have a look at all of its content: [ATSPRE, all in one](http://ats-lang.sourceforge.net/DOCUMENT/ATS-Postiats/prelude/HTML/ATSPRE_all_in_one.html).
+
+### How to build SOMETHING on ATS source code?
+
+Sometimes, [Travis-CI setting file](https://github.com/githwxi/ATS-Postiats/blob/master/.travis.yml) is useful for your issue. Please see [Travis-CI website](http://docs.travis-ci.com/), if you doesn't the Travis-CI.
