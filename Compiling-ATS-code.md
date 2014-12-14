@@ -3,7 +3,7 @@ atscc, sometimes called patscc in ATS/Postiats, is a wrapper utility to allow ea
 
 Here is more information on 'patscc' and 'patsopt':
 
-http://www.ats-lang.org/RESOURCE/#ATS_utility
+http://www.ats-lang.org/Resources.html#ATS-Toolkit
 
 In order to compile ATS2 programs, you can now do
 something like:
