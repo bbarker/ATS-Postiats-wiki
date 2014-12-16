@@ -1,1 +1,1 @@
-See [[editors|editors#IDEs]].
+See [[editors|editors#ides]].
