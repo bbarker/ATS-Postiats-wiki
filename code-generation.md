@@ -20,6 +20,26 @@ The subset is comprised by the following kinds of syntax (see atsparemit.sats):
 
 A function declaration (f0decl) consists of function kind (external/static), heading (i.e. signature, that is, list of (named) arguments and return type) and optional body (list of local variable definitions and list of instructions). Moreover, in accordance with C rules, every function is emitted twice: firstly, as a forward-declaration (contains no body, arguments might be unnamed), and secondly, as a definition (in this case, body is present).
 
+### Overview of making an ATS code generator
+
+First clone the [ATS-parse-emit directory](https://github.com/githwxi/ATS-Postiats-contrib/tree/master/projects/MEDIUM/ATS-parse-emit).
+
+Say you want atscc2XYZ for a language called XYZ.
+
+Create a directory of the name XYZ (or any other name you like) and some symbolic links:
+
+```
+mkdir XYZ
+cd XYZ
+ln -s ../*.?ats .
+```
+
+Now you can study atscc2py, atscc2js and atscc2php.
+
+1.  `atscc2py` is the hardest as it does not support (1) `goto` labels or (2) switch statements.
+2.  `atscc2php` is the easiest as it supports both (1) and (2).
+3.  `atscc2js` is in the middle: it supports (2) but not (1).
+
 ### Language translating functions
 
 For more complete documentation, please see:
