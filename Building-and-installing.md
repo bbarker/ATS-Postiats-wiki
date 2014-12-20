@@ -73,6 +73,22 @@ make -f Makefile_devl all C3NSTRINTKND=intknd
 
 which effectively replaces `gmpknd` with `intknd`. You shoud NOT do this for producing safety-critical production code, but should be find for most development. Also note that if you want to specify linker and library flags for GMP, you must currently do so through the environment variable `LIBGMP`, **not** `LDFLAGS`.
 
+## ATS and Mac OS X
+
+Using ATS under Mac OS X  has been a thorny issue for quite sometime.
+Probably the easiest way to install ATS2 under OSX is by using a [homebrew formula](https://github.com/Homebrew/homebrew/blob/master/Library/Formula/ats2-postiats.rb).
+
+Here are some caveats:
+
+1. ATS1 cannot be correctly compiled by clang. You need genuine gcc (the one
+on OSX is hooked to clang by default) to compile ATS1. See below.
+
+2. When using gcc-4.x to compile ATS1, please make sure that you generate
+a no-gc version of ATS1. Let us refer to this version as ATS1-ngc.
+
+3. Please use ATS1-ngc to compile ATS2.
+
+Sounds complicated? All the steps can be found in [.travis.yml](../../tree/master/.travis.yml).
 
 ## Install ATS using package system
 
