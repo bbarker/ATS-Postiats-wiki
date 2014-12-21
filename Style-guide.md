@@ -1,8 +1,7 @@
 Functional Programming (FP) style in ATS.
 -----------------------------------------------------------
 
-
-**General Advice**
+There is no style that is considered official[*](https://github.com/githwxi/ATS-Postiats/issues/110#issuecomment-67625812), though one can take a look at existing ATS library sources to get a sense of one good style
 
 **(Insert sagely advice in this paragraph)** As with many things, optimal learning can be achieved by different people in different ways. A suggestion for functional programming in general, to those who have experience in imperative programming, is to read examples, understand examples, and ***implement examples***. Much like math or writing literature, most people need practice and experience to really become effective. Abstraction is an important mechanism in making good style (and good code) possible. This [code example for a calculator](http://www.cs.bu.edu/~hwxi/academic/courses/CS320/Spring13/code/calculator/), while not exactly a tutorial, demonstrates these principles. [Discussion on the calculator example is located here](https://groups.google.com/forum/?fromgroups=#!topic/ats-lang-users/ad5S6SY0I0E).
 
