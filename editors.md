@@ -26,7 +26,7 @@ IDE support is currently in the works. Generally speaking, Java has a number of 
 
 IDEs outside of the Java ecosystem have also been explored, including [MonoDevelop](https://github.com/ashalkhakov/ATS-Postiats-ide), which currently has syntax highlighting support.
 
-IDE support usually starts with lexing the language into a form that the IDE can understand, and for this purpose, the IDE developer can find the datatype for tokens in ATS2 declared in [pats_lexing.sats](../../blob/master/src/pats_lexing.sats). 
+IDE support usually starts with lexing the language into a form that the IDE can understand, and for this purpose, the IDE developer can find the datatype for tokens in ATS2 declared in [pats_lexing.sats](https://github.com/githwxi/ATS-Postiats/blob/master/src/pats_lexing.sats). 
 
 For further discussion on support for IDEs, please see the [google group](https://groups.google.com/forum/#!forum/ats-lang-users).
 
