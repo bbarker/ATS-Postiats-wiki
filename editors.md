@@ -22,7 +22,9 @@ This is just a syntax highlight file, not a full mode. You can install it at the
 
 ##IDEs
 
-IDE support is currently in the works. Generally speaking, Java has a number of (free and open source) IDEs that are quite mature (IntelliJ IDEA, Eclipse, Netbeans). There is work on a [parser in Java for ATS](https://github.com/alex-ren/org.ats-lang.postiats.jats). Mostly for historical purposes, there is an [antlr4ide](https://github.com/alex-ren/antlr4ide) supporting ATS.
+IntelliJ support is currently in development (see [IntelliJATS](https://github.com/bbarker/IntelliJATS)); at the moment, it includes syntax highlighting support and the ability to build by using a [gradle build script](https://gist.github.com/bbarker/c73ecf257bca966c1efd) file that wraps existing Makefiles.
+
+Generally speaking, Java has a number of (free and open source) IDEs that are quite mature (IntelliJ IDEA, Eclipse, Netbeans). There is work on a [parser in Java for ATS](https://github.com/alex-ren/org.ats-lang.postiats.jats). Mostly for historical purposes, there is an [antlr4ide](https://github.com/alex-ren/antlr4ide) supporting ATS.
 
 IDEs outside of the Java ecosystem have also been explored, including [MonoDevelop](https://github.com/ashalkhakov/ATS-Postiats-ide), which currently has syntax highlighting support.
 
