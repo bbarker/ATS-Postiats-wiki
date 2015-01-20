@@ -7,6 +7,8 @@ Currently, this is possible for the following languages:
 * PHP
 * Perl
 
+To make a code generator for language X, cd to `$PATSHOME/projects/MEDIUM/ATS-parse-emit/X`, run `make` and copy atscc2X to `$PATSHOME/bin`.
+
 ### Introduction
 
 ATS2 compiler targets a subset of C programming language. There is a library/utility ATS-parse-emit (see above for a link) that parses ATS2 compiler output and transforms it into executable code in other programming languages (e.g., currently, Python).
