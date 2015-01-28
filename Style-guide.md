@@ -57,3 +57,12 @@ Style with linear types.
 Linear types are generally easy to use, with a few exceptions, such as [[dataviewtype|dataviewtype]]s. No knowledge of linear logic formalisms is necessary for using linear types in ATS. Perhaps the main issue for beginners with linear types, or at least linear types in ATS, will be getting used to a somewhat large body of syntactical features; many of these share some overlap in their conceptual usage but operate on different resources. This is somewhat in contrast to dependent types, where the syntax is relatively easy, but keeping track of the logic in one's mind can become quite a burden. This makes using dependent type all too easy to get one in to trouble with the typechecker (see above).
 
 An [example of using linear types with unlimited precision integers](https://groups.google.com/forum/?fromgroups=#!topic/ats-lang-users/Cdk-_gbeVfE) (using [GMP](http://gmplib.org/)) is available, which should be useful for beginners to learn linear types.
+
+Naming conventions (for types and others)
+-----------------------------------------
+
+* For a type named g0xxxx, 'g' stands generic and '0' for un-indexed, See: [Naming convention](https://groups.google.com/forum/#!topic/ats-lang-users/4djRxVNHAys)
+* For a type named g1xxxx, 'g' stands generic and '1' for indexed, See: [Naming convention](https://groups.google.com/forum/#!topic/ats-lang-users/4djRxVNHAys)
+* Many type names, like eg. `size_t`, reuse that of C
+
+
