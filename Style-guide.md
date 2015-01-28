@@ -61,8 +61,9 @@ An [example of using linear types with unlimited precision integers](https://gro
 Naming conventions (for types and others)
 -----------------------------------------
 
-* For a type named g0xxxx, `g` stands generic and `0` for un-indexed, See: [Naming convention, on ats-lang-users](https://groups.google.com/forum/#!topic/ats-lang-users/4djRxVNHAys)
-* For a type named g1xxxx, `g` stands generic and `1` for indexed, See: [Naming convention, on ats-lang-users](https://groups.google.com/forum/#!topic/ats-lang-users/4djRxVNHAys)
+* For a type named `g0xxxx`, `g` stands generic and `0` for un-indexed, See: [Naming convention, on ats-lang-users](https://groups.google.com/forum/#!topic/ats-lang-users/4djRxVNHAys)
+* For a type named `g1xxxx`, `g` stands generic and `1` for indexed, See: [Naming convention, on ats-lang-users](https://groups.google.com/forum/#!topic/ats-lang-users/4djRxVNHAys)
 * Many type names, like eg. `size_t`, reuse that of C
+* A type named `xxxx_vt` is typical for a view‑type
 
 
