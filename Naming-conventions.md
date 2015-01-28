@@ -1,0 +1,1 @@
+See the dedicated section in [[Style guide]].
