@@ -1,1 +1,1 @@
-See the dedicated section in [[Style guide]].
+For now, see the dedicated section in [[Style guide]].
