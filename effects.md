@@ -11,7 +11,8 @@ Functions can have various effects that may be tracked by the typechecker [\[1\]
 * `cloref` - the function is a peristent closure that requires the garbage collector to be freed. 
 * `lin` - the function is linear and can be called only once
 * `prf` - the function is a proof function
-* `!wrt` - indicates that a function may write to a location it owns. For instance, ptr_set incurs such an effect. 
+* `!wrt` - indicates that a function may write to a location it owns; for instance, ptr_set incurs such an effect
+* `!laz` - indicates a form of effect associated with lazy-evaluation; see [the ATS2 tutorial page](http://ats-lang.sourceforge.net/DOCUMENT/ATS2TUTORIAL/HTML/c764.html)
 
 These can be combined, e.g. `<lincloptr1>`. Function effects are all of [[sort|sort]] `eff`.
 
