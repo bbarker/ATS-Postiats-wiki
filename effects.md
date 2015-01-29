@@ -2,7 +2,7 @@ Functions can have various effects that may be tracked by the typechecker [\[1\]
 
 * `!exn` - the function possibly raises exceptions
 * `!ntm` - the function possibly is non-terminating
-* `!ref` - the function possibly updates shared memory
+* `!ref` - the function possibly updates shared memory, i.e. can read from or write to a location that one knows exists but does not own
 * `0` - the function is pure (has no effects)
 * `1` - the function can have all effects
 * `fun` - the function is an ordinary, non-closure, function
@@ -12,7 +12,6 @@ Functions can have various effects that may be tracked by the typechecker [\[1\]
 * `lin` - the function is linear and can be called only once
 * `prf` - the function is a proof function
 * `!wrt` - indicates that a function may write to a location it owns. For instance, ptr_set incurs such an effect. 
-* `!ref` - can read from or write to a location that one knows exists but does not own.
 
 These can be combined, e.g. `<lincloptr1>`. Function effects are all of [[sort|sort]] `eff`.
 
