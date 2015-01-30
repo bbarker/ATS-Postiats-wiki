@@ -33,6 +33,7 @@ address can be obtained using `view@` (see below).
 * `stadef` - introduce an alias / name for a concrete static definition; there are specialized form of it; see [[type]].
 * `staload` - either loads a name‑space assigning it to a named prefix or opens a name‑space (anonymously, without a prefix); see [[staload]].
 * `symintr` - introduce the name of a symbol (without fixity) to be overloaded (this does not introduce the overloading), with the later help of `overload` and `with`; see [[overload]].
+* `tkindef` - `tkindef k = "t"` is the same as `stadef k = $extkind "t"`; see file `basics_sta.sats`.
 * `typedef` - introduce an alias / name for a concrete type definition; a specialized form of `stadef` [1]; see [[type]].
 * `val` - introduces a val-declaration, which binds a value to a name. This is the most common way of making "variables" in ATS; but see `var` for an alternative.
 * `val-` - introduces a val-declaration with additional meaning; if names in a datatype constuctor are being bound (e.g. `val-list_cons(x,xs) = some_list`) then it will suppress a warning message in the case that the pattern matching is non-exhaustive. If instead a value is being matched (e.g. `val-8 = n*4`), this will perform dynamic checking and will error (in this example, the program will exist if n is not equal to 2).
