@@ -8,7 +8,7 @@ ref-counted strings. In ATS2, there is a type [strobjref](https://github.com/git
 At the beginning of a project, it is usually uncertain what kind of string is needed.
 An abstract type can be introduced:
 
-```ocaml
+```ats
 absviewtype mystring (l:addr)
 ```
 
