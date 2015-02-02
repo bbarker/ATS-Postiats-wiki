@@ -65,6 +65,6 @@ Naming conventions (for types and others)
 * For a type named `g1xxxx`, `g` stands generic and `1` for indexed, See: [Naming convention, on ats-lang-users](https://groups.google.com/forum/#!topic/ats-lang-users/4djRxVNHAys)
 * Many type names, like eg. `size_t`, reuse that of C
 * A type named `xxxx_vt` is typical for a view‑type
-* A function may be given a name indicating it is a loop, like `loop` or `foo_loop`, only if it is tail‑recursive; see [Recursively Defined Datatypes, in Intro to ATS](http://ats-lang.sourceforge.net/DOCUMENT/INT2PROGINATS/HTML/x1008.html)
+* A function should be given a name indicating it is a loop, like `loop` or `foo_loop`, only if it is tail‑recursive; see [Recursively Defined Datatypes, in Intro to ATS](http://ats-lang.sourceforge.net/DOCUMENT/INT2PROGINATS/HTML/x1008.html)
 
 
