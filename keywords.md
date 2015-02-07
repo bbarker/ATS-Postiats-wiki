@@ -29,6 +29,7 @@ address can be obtained using `view@` (see below).
 * `propdef` - introduce an alias / name for a proposition definition; a specialized form of `stadef` [1]; see [[type]].
 * `primplmnt` - implement a proof function; see [prfun, extern and implement at ats.lang.users](https://groups.google.com/forum/#!topic/ats-lang-users/7-EMCceXpv4); see also `primplement`.
 * `primplement` - implement a proof function; see [prfun, extern and implement at ats.lang.users](https://groups.google.com/forum/#!topic/ats-lang-users/7-EMCceXpv4); see also `primplmnt`.
+* `sif` - like the conditional statement `if`, for static conditional expression (in proofs) ; see [Constructing Proofs as Total Functions, in Intro to ATS](http://ats-lang.sourceforge.net/DOCUMENT/INT2PROGINATS/HTML/x2905.html).
 * `sta` - introduce an alias / name for an abstract static definition; there are specialized form of it; see [[type]].
 * `stadef` - introduce an alias / name for a concrete static definition; there are specialized form of it; see [[type]].
 * `staload` - either loads a name‑space assigning it to a named prefix or opens a name‑space (anonymously, without a prefix); see [[staload]].
