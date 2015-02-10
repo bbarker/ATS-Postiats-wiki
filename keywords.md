@@ -24,11 +24,11 @@ address can be obtained using `view@` (see below).
 * `implement` - used to implement a function that has been defined using `fun` or `fn`
 * `of` - has several purposes. Most commonly, it is used as a type specifier in an algebraic constructor (e.g. in a `datatype`). It also can specify the type in some other contexts such as specifying what the ATS type is for an external type (`$extype`; see [[C interface|C interface]]). Finally, it can denote operator overloading precedence (see [[overload|overload#overloading-precedence]]).
 * `overload` - overloads a symbol previously introduced with `symintr`; this tells what is overloaded; see [[overload]].
-* `prefix` - like `symintr`, but with fixity; see [[overload]].
 * `postfix` - like `symintr`, but with fixity; see [[overload]].
-* `propdef` - introduce an alias / name for a proposition definition; a specialized form of `stadef` [1]; see [[type]].
-* `primplmnt` - implement a proof function; see [prfun, extern and implement at ats.lang.users](https://groups.google.com/forum/#!topic/ats-lang-users/7-EMCceXpv4); see also `primplement`.
+* `prefix` - like `symintr`, but with fixity; see [[overload]].
 * `primplement` - implement a proof function; see [prfun, extern and implement at ats.lang.users](https://groups.google.com/forum/#!topic/ats-lang-users/7-EMCceXpv4); see also `primplmnt`.
+* `primplmnt` - implement a proof function; see [prfun, extern and implement at ats.lang.users](https://groups.google.com/forum/#!topic/ats-lang-users/7-EMCceXpv4); see also `primplement`.
+* `propdef` - introduce an alias / name for a proposition definition; a specialized form of `stadef` [1]; see [[type]].
 * `sif` - like the conditional statement `if`, for static conditional expression (in proofs) ; see [Constructing Proofs as Total Functions, in Intro to ATS](http://ats-lang.sourceforge.net/DOCUMENT/INT2PROGINATS/HTML/x2905.html).
 * `sta` - introduce an alias / name for an abstract static definition; there are specialized form of it; see [[type]].
 * `stadef` - introduce an alias / name for a concrete static definition; `stadef` is to static what `val` is to dynamic; there are specialized form of it; see [[type]] and [Example: Proving Properties on Braun Trees, in Intro to ATS](http://ats-lang.sourceforge.net/DOCUMENT/INT2PROGINATS/HTML/x3017.html).
