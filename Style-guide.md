@@ -66,5 +66,7 @@ Naming conventions (for types and others)
 * Many type names, like eg. `size_t`, reuse that of C
 * A type named `xxxx_vt` is typical for a view‑type
 * A function should be given a name indicating it is a loop, like `loop` or `foo_loop`, only if it is tail‑recursive; see [Recursively Defined Datatypes, in Intro to ATS](http://ats-lang.sourceforge.net/DOCUMENT/INT2PROGINATS/HTML/x1008.html)
+* With functional relations à la Prolog, the result is the last element, and the arguments are the first elements ; ex. while one may write `val r = fib(n);` with the result on the left, one would better write `FIB(n, r)`, with the result on the right, to express the relationship
+
 
 
