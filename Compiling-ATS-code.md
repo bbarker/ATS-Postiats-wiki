@@ -60,3 +60,14 @@ Effectively this does the following:
 Several example exist where a Makefile for an ATS project can generate portable C code that can later be compiled without the aid of any ATS installation:
 
 * The most [basic example](../../tree/master/doc/EXAMPLE/PORTABLE).
+
+## Search paths
+
+*Paptsopt* search paths, from first searched to last searched:
+
+  * the current directory of the filename being processed;
+  * the paths in `PATHLST` added by the flag `-IATS`;
+  * the paths in the ones in `PREPATHLST`, that is for now, `${PATSHOME}` (there may be more in the future).
+
+See [“Load search path?” on ats-lang-users](https://groups.google.com/forum/#!topic/ats-lang-users/fS9R7QhgZVY).
+
