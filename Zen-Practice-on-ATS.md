@@ -1,18 +1,16 @@
 ## Kiwamu Okabe's practice
 
-On real world, there are not meaning. There are values only.
-Meaning is located at a mind of human who watch the values.
-Then, it's nonsense that you think type constructor creates values. The order is reversed.
+In the real world, there is no intrinsic meaning. There is only values.
+Meaning is located in the mind of a human who watches those values.
+Therefore, it's nonsense to think that a type constructor creates values. The order is reversed.
 
-Let's think that a human applies type imagined, by himself, to the value. It's called "Applied Type".
-What is value? Value is possible to change any time.
+Suppose a human applies an imagined type to a value. What is the value? It can change at any time.
 However, the human wishes the value's meaning doesn't change, while the value is changed.
-That is to say any things are built with 2 parts, that changing part and fixed part.
-The former is "dynamics", the latter is "statics" that is also called "static meaning". Meaning is "type".
-Of course, his wish may be sometimes not fitted together.
-Types applied wildly by him will not be well-typed.
+That is to say everything is built with two parts: a changing part, and a fixed part.
+The former is "dynamics", the latter is "statics" that is also called "static meaning", or simply "type".
+Of course, his wish may sometimes not fit together. Types applied wildly by the programmer might not be well-typed.
 
-Whereat, introduce type influence after he applied type.
+Whereas, introduce type influence after he applied type.
 Any subset of the world should have only a meaning.
 If there is some subsets have some meanings, he does not correctly understand the world.
 This is Applied Type System.
