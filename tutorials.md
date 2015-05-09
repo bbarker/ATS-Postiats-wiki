@@ -20,4 +20,4 @@ An example demonstrating [[dataviewtype|dataviewtype]]s.
 
 An [ATS wiki book](http://en.wikibooks.org/wiki/ATS:_Programming_with_Theorem-Proving) exists, but currently only has a few pages (and appears to be rather dated, i.e. uses ATS1).
 
-A step by step introduction to ATS2, presuming no big prior knowledge of AST2, and using Z3 as an external prover: “[Verified Efficient Programs in ATS: qsort](http://www.illtyped.com/projects/patsolve/qsort.html)”.
+A step by step introduction to using Z3 as an external prover with ATS2: “[Verified Efficient Programs in ATS: qsort](http://www.illtyped.com/projects/patsolve/qsort.html)”.
