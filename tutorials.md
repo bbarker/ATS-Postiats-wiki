@@ -2,7 +2,7 @@ For a beginner, perhaps the most important tool to learn is *good functional sty
 
 Currently, the ATS site has [several tutorials and references](http://www.ats-lang.org/DOCUMENT/), several of which are described below. There is also a more [dense tutorial or language overview reference](http://cs.likai.org/ats/ml-programmers-guide-to-ats) that is highly recommended.
 
-* Chris Double has written [many blogs on ATS](http://www.bluishcoder.co.nz/tags/ats/). There are also [many useful topical tutorials](http://www.ats-lang.org/htdocs-old/TUTORIAL/tutorial.html) on the ATS site. Of course, there may be [resources not mentioned here](https://www.google.com/search?as_q=ATS+language&as_epq=&as_oq=tutorial+blog+programming&as_eq=&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=&as_occt=any&safe=images&tbs=&as_filetype=&as_rights=). 
+* Chris Double has written [many blogs on ATS](http://www.bluishcoder.co.nz/tags/ats/). There are also [many useful topical tutorials](http://www.ats-lang.org/Documents.html) on the ATS site. Of course, there may be [resources not mentioned here](https://www.google.com/search?as_q=ATS+language&as_epq=&as_oq=tutorial+blog+programming&as_eq=&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=&as_occt=any&safe=images&tbs=&as_filetype=&as_rights=). 
 * [A Tutorial on Programming Features in ATS](http://ats-lang.sourceforge.net/DOCUMENT/ATS2TUTORIAL/HTML/HTMLTOC/book1.html) covers several topics common to many programming languaages, as well as some tutorials on linear types.
 * [Graphics tutorial using ATS/Cairo](http://ats-lang.sourceforge.net/DOCUMENT/ATS2CAIRO/HTML/book1.html).
 
