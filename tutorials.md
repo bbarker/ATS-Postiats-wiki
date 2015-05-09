@@ -4,7 +4,7 @@ Currently, the ATS site has [several tutorials and references](http://www.ats-la
 
 * Chris Double has written [many blogs on ATS](http://www.bluishcoder.co.nz/tags/ats/). There are also [many useful topical tutorials](http://www.ats-lang.org/htdocs-old/TUTORIAL/tutorial.html) on the ATS site. Of course, there may be [resources not mentioned here](https://www.google.com/search?as_q=ATS+language&as_epq=&as_oq=tutorial+blog+programming&as_eq=&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=&as_occt=any&safe=images&tbs=&as_filetype=&as_rights=). 
 * [[A Tutorial on Programming Features in ATS|http://www.ats-lang.org/DOCUMENT/ATS2TUTORIAL/HTML/book1.html]] covers several topics common to many programming languaages, as well as some tutorials on linear types.
-* [Graphics tutorial using ATS/Cairo](http://www.ats-lang.org/DOCUMENT/ATS2CAIRO/HTML/book1.html).
+* [Graphics tutorial using ATS/Cairo](http://ats-lang.sourceforge.net/DOCUMENT/ATS2CAIRO/HTML/book1.html).
 
 ## Algorithms in ATS
 
