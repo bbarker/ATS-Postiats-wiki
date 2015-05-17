@@ -76,7 +76,21 @@ Here are steps to generate Javascript from ATS on your own system:
   patsopt -d foo.dats | atscc2js -o foo_dats.js
   ```
 
+### Perl
 
+```sh
+#Build atscc2pl
+cd $PATSHOMERELOC/CATS-parsemit/Perl
+make
+cp atscc2pl $PATSHOME/bin/
+cd $PATSHOMERELOC/contrib/libatscc/libatscc2pl
+
+#Build libraries for Perl
+make
+make all_in_one
+export PERL5LIB=$PERL5LIB:$PATSHOMERELOC/contrib/libatscc/libatscc2pl
+
+```
 
 ### Python
 For compiling code to Python, there is currently no plan to handle pointer operations.
