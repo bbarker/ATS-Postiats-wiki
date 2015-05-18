@@ -3,15 +3,15 @@ While the usual way to interact with other languages is to interact through C in
 Currently, this is possible for the following languages:
 * C (The default; several compilers are known to work, including GCC, LLVM/Clang, and TinyCC.)
 * Javascript (Compilation is supported by the emscripten compiler which compiles C code to javascript [\[1\]][1].)
-* [Python](https://github.com/githwxi/ATS-Postiats-contrib/tree/master/projects/MEDIUM/ATS-parse-emit/Python)
+* [Python](https://github.com/githwxi/ATS-Postiats-contrib/tree/master/projects/MEDIUM/CATS-parsemit/Python)
 * PHP
 * Perl
 
-To make a code generator for language X, cd to `$PATSHOME/projects/MEDIUM/ATS-parse-emit/X`, run `make` and copy atscc2X to `$PATSHOME/bin`.
+To make a code generator for language X, cd to `$PATSHOME/projects/MEDIUM/CATS-parsemit/X`, run `make` and copy atscc2X to `$PATSHOME/bin`.
 
 ### Introduction
 
-ATS2 compiler targets a subset of C programming language. There is a library/utility ATS-parse-emit (see above for a link) that parses ATS2 compiler output and transforms it into executable code in other programming languages (e.g., currently, Python).
+ATS2 compiler targets a subset of C programming language. There is a library/utility CATS-parsemit (see above for a link) that parses ATS2 compiler output and transforms it into executable code in other programming languages (e.g., currently, Python).
 
 The subset is comprised by the following kinds of syntax (see atsparemit.sats):
 
@@ -24,7 +24,7 @@ A function declaration (f0decl) consists of function kind (external/static), hea
 
 ### Overview of making an ATS code generator
 
-First clone the [ATS-parse-emit directory](https://github.com/githwxi/ATS-Postiats-contrib/tree/master/projects/MEDIUM/ATS-parse-emit).
+First clone the [CATS-parsemit directory](https://github.com/githwxi/ATS-Postiats-contrib/tree/master/projects/MEDIUM/CATS-parsemit).
 
 Say you want atscc2XYZ for a language called XYZ.
 
@@ -64,11 +64,11 @@ Simple examples can be tried [on-line](http://www.ats-lang.org/SERVER/MYCODE/Pat
 
 Here are steps to generate Javascript from ATS on your own system:
 
-1. Generating the command `atscc2js`. There is a packaged version [on sourceforge](http://sourceforge.net/p/ats2-lang-contrib/code/ci/master/tree/projects/ATSCC2JS/) (also on [github](https://github.com/githwxi/ATS-Postiats-contrib/tree/master/projects/MEDIUM/ATS-parse-emit/JavaScript)).
+1. Generating the command `atscc2js`. There is a packaged version [on sourceforge](http://sourceforge.net/p/ats2-lang-contrib/code/ci/master/tree/projects/ATSCC2JS/) (also on [github](https://github.com/githwxi/ATS-Postiats-contrib/tree/master/projects/MEDIUM/CATS-parsemit/JavaScript)).
 
   Use `make` to build. Of course you need `patscc` and `patsopt`.
 
-2. Please take a look at the examples in [this directory](https://github.com/githwxi/ATS-Postiats-contrib/blob/master/projects/MEDIUM/ATS-parse-emit/JavaScript/TEST). There is a Makefile there that shows how to generate JS code from ATS source.
+2. Please take a look at the examples in [this directory](https://github.com/githwxi/ATS-Postiats-contrib/blob/master/projects/MEDIUM/CATS-parsemit/JavaScript/TEST). There is a Makefile there that shows how to generate JS code from ATS source.
 
   Say you have `foo.dats`. Essentially this is what you need to generate `foo_dats.js`:
 
@@ -78,14 +78,20 @@ Here are steps to generate Javascript from ATS on your own system:
 
 ### Perl
 
+The directions for the Perl code generator (`atscc2pl`) are similar to the other code generators, but we've included some possible directions for convenience.
+
 ```sh
+#
+# Assumes $PATSHOMERELOC is set to your ATS-Postiats-contrib directory.
+#
+
 #Build atscc2pl
 cd $PATSHOMERELOC/CATS-parsemit/Perl
 make
 cp atscc2pl $PATSHOME/bin/
-cd $PATSHOMERELOC/contrib/libatscc/libatscc2pl
 
 #Build libraries for Perl
+cd $PATSHOMERELOC/contrib/libatscc/libatscc2pl
 make
 make all_in_one
 export PERL5LIB=$PERL5LIB:$PATSHOMERELOC/contrib/libatscc/libatscc2pl
